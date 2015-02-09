@@ -1,6 +1,6 @@
 {
     "name": "banner",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Example package.json. Feel free to copy!",
     "main": "index.js",
     "devDependencies": {

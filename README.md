@@ -9,8 +9,8 @@
 Include the banner assets in your project either as **Static Resources**
 
 ```html
-<link rel="stylesheet" href="http://web-toolkit.global.sky.com/components/banner/0.0.1/styles/banner.min.css" />
-<script type="text/javascript" src="http://web-toolkit.global.sky.com/components/banner/0.0.1/scripts/banner.min.js"></script>
+<link rel="stylesheet" href="http://web-toolkit.global.sky.com/components/banner/0.1.0/styles/banner.min.css" />
+<script type="text/javascript" src="http://web-toolkit.global.sky.com/components/banner/0.1.0/scripts/banner.min.js"></script>
 ```
 
 or alternatively, **Via Bower**
