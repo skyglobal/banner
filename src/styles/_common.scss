@@ -1,0 +1,55 @@
+$background-dark: #eaeaea;
+$text-primary: #333333;
+$link: #0070a5;
+
+$banner-bg: $background-dark;
+$banner-text-color: $text-primary;
+$banner-action-text-color: $link;
+
+$container-width: 1140px;
+$gutter: 36px;
+$container-width-thin: 974px;
+$width-plus-gutters: $container-width + $gutter + $gutter;
+
+$font-default: Helvetica, Arial;
+$font-branded-regular: SkyTextRegular, $font-default;
+
+// Wrap content with global class
+$global-class: skycom;
+
+@mixin wrap {
+  .#{$global-class} {
+    @content;
+  }
+}
+
+@include wrap {
+  /**
+   * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+   */
+  .cf {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+// Main container. Used to be skycom_container
+%container {
+  width: ($container-width/$width-plus-gutters) * 100%;
+  max-width: $container-width-thin;
+  margin: 0 auto;
+  clear: left;
+  overflow: visible;
+  font-family: $font-branded-regular;
+}
+
+@mixin linear-gradient($startDirection, $endDirection, $startColor, $endColor) {
+  background: -moz-linear-gradient($startDirection, $startColor 0%, $endColor 100%);
+  background: -webkit-linear-gradient($startDirection, $startColor 0%, $endColor 100%);
+  background: -o-linear-gradient($startDirection, $startColor 0%, $endColor 100%);
+  background: -ms-linear-gradient($startDirection, $startColor 0%, $endColor 100%);
+  background: linear-gradient(to $endDirection, $startColor 0%, $endColor 100%);
+}

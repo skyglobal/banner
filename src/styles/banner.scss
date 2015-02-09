@@ -1,2 +1,104 @@
-//Import any bower dependencies as so:
-//@import 'bower_components/bskyb-colours/src/scss/colours';
+@import 'common';
+
+%banner__link {
+  cursor: pointer;
+  color: $banner-action-text-color;
+  font-size: 13px;
+  text-decoration: none;
+
+  & > i:before {
+    font-size: 12px;
+  }
+
+  &:visited, &:hover, &:active, &:focus {
+    color: $banner-action-text-color;
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    & > i:before {
+      text-decoration: none;
+    }
+  }
+
+}
+
+@include wrap {
+
+  &.banner {
+//    @include transition(all 250ms ease-in);
+//    @include box-shadow(0 0px 12px 0px #999);
+
+    font-family: $font-default;
+    padding: 10px 0;
+
+    background: $banner-bg;
+    color: $banner-text-color;
+  }
+
+  &.banner.banner--blue {
+    background: #2078cb;
+    @include linear-gradient(top, bottom, #2078cb, #00438d);
+    color: white;
+
+    %banner__link, i {
+      color: white;
+    }
+  }
+
+  .banner__content {
+    @extend %container;
+    @extend .cf;
+  }
+
+  .banner__heading {
+    margin: 0;
+    padding: 0;
+    font-family: $font-branded-regular;
+    font-size: 18px;
+  }
+
+  .banner__message {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 13px;
+
+    a {
+      @extend %banner__link;
+    }
+  }
+
+  .banner__action {
+    @extend %banner__link;
+
+    margin: 10px 0;
+    padding-right: 10px;
+
+    & > i {
+      margin-right: 5px;
+    }
+  }
+
+  .banner__close {
+    @extend %banner__link;
+
+    float: right;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+
+    & > i {
+      margin-left: 5px;
+      color: $banner-action-text-color;
+    }
+  }
+
+//  @include mobile {
+//    .banner__message {
+//      display: none;
+//    }
+//  }
+
+}

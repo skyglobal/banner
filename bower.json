@@ -1,19 +1,19 @@
 {
-    "name": "bskyb-banner",
-    "version": "0.0.0",
-    "homepage": "https://github.com/skyglobal/banner",
-    "authors": [
-        "Peter Mouland <{{ git.email }}>"
-    ],
-    "description": "banner",
-    "main": "dist",
-    "license": "BSD3",
-    "ignore": [
-        "**/*",
-        "!dist/**/*",
-        "!src/**/*"
-    ],
-    "devDependencies": {
-        "bskyb-core": "~0.0.3"
-    }
+  "name": "bskyb-banner",
+  "version": "0.0.0",
+  "homepage": "https://github.com/skyglobal/banner",
+  "authors": [
+    "Peter Mouland <peter.mouland@gmail.com>"
+  ],
+  "description": "banner",
+  "main": "dist",
+  "license": "BSD3",
+  "ignore": [
+    "**/*",
+    "!dist/**/*",
+    "!src/**/*"
+  ],
+  "devDependencies": {
+    "bskyb-core": "~0.0.3"
+  }
 }

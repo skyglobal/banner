@@ -1,26 +1,10 @@
-var version  = require('./utils/version.js');
+var Banner = require('./utils/banner')
 
-// By default JS dependency is handled using browserify
-// please see 'GULP-TASKS.md#js' for more info
-//
-// You may need another component:
-// run : $ bower install bskyb-event --save
-// then add
-// var event = require('../../bower_components/bskyb-event/src/js/event');
-
-//example function and export
-function sum(args){
-    var total = 0;
-    args.forEach(function(int){
-        total += int;
-    });
-    return total;
-}
-
-module.exports = {
-    sum: sum,
-    version: version
-};
-
-if (typeof skyComponents === "undefined") window.skyComponents = {};
-skyComponents['banner'] = module.exports;
+new Banner({
+    id: 'cookie-wrapper',
+    header: 'This website uses cookies',
+    message: 'Cookies remember you so we can give you a better service online. By using this website or closing this message, you are agreeing to our <a href="http://help.sky.com/security/privacy/privacy-and-cookies-notice#tab-1" name="masthead-message-text_cookie-wrapper:cookies-notice">Cookies notice</a>.',
+    action: 'Cookies explained',
+    callback: "http://help.sky.com/security/privacy/cookies-explained/",
+    remember: 365
+});
